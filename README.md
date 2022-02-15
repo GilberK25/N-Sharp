@@ -18,8 +18,8 @@ Since it is just me working on this, and as a side project, no doubt this will t
 ## About the folders
 | Folder | Description |
 | - | - |
+| `/Compiler` | An N# project that contains the source code for the compiler. |
 | `/Documentation` | Documentation for the language. |
 | `/Examples` | Written examples of running N# code. |
+| `/Extensions` | Some extension projects for popular IDEs such as Visual Studio. |
 | `/Libraries` | The built-in libraries that come with the language. |
-| `/Compiler` | An N# project that contains the source code for the compiler. |
-| `/Extensions` | Some extension projects for popular IDEs such as Visual Studio |
