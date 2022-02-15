@@ -23,3 +23,6 @@ Since it is just me working on this, and as a side project, no doubt this will t
 | `/Examples` | Written examples of running N# code. |
 | `/Extensions` | Some extension projects for popular IDEs such as Visual Studio. |
 | `/Libraries` | The built-in libraries that come with the language. |
+
+## Miscellaneous
+- Accepted file endings: `.ns`, `.nsharp`
