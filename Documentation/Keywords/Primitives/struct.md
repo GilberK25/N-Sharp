@@ -15,7 +15,7 @@ A structure is a type of [primitive](Primitives.md) keyword, with certain specia
 The key feature with structures are their non-nullable traits. A structure variable which is unassigned or set to its default value will automatically set itself to its parameterless constructor, even if it isn't told to. Structures can have other constructors, but a parameterless one must exist. If one does not, the structure will use a default constructor, which simply assigns every field belonging to it to its default value.
 
 ```nsharp
-public namespace ExampleA
+public namespace Example
 {
     public struct TypeA
     {

@@ -13,7 +13,7 @@ A class is the default and most used type of [primitive](Primitives.md). It has 
 ```nsharp
 using namespace System;
 
-public namespace ExampleA
+public namespace Example
 {
     public class TypeA
     {
