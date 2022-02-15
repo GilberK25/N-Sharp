@@ -11,8 +11,8 @@ The primitive keyword goes before the type name, but after any instance and prot
 
 In order to define a type, a primitive keyword **must** be before the name, but there must only be one.
 
-```csharp
-namespace ExampleA
+```nsharp
+public namespace ExampleA
 {
     public static class TypeA { }
     // The primitive keyword is in the correct place.
