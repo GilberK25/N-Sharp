@@ -20,8 +20,6 @@ Interfaces deriving from other interfaces do not have to implement bodies, howev
 An interface can choose to declare a body for its non-type objects, and in that case a class or structure deriving from it is not required to implement its own. However, it still can by using the `override` keyword.
 
 ```nsharp
-using namespace System;
-
 public namespace Example
 {
     public interface TypeA
@@ -56,7 +54,7 @@ public namespace Example
 
     public class TypeD : TypeC
     {
-        public int FieldA;
+        public int FieldA = 1; // Now that we are in a class, we can initialize here.
         // Missing `FieldB`. This will throw a compiler error.
         public int FieldC;
         public int FieldD;
