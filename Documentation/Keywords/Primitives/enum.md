@@ -20,6 +20,7 @@ public namespace Example
         ValueB = 1,
         ValueC = 0, // 0 has been used, and cannot be used again.
         ValueD = 5, // Skipping increments is allowed.
+        ValueE = -6, // It can also be out of order.
     }
 
     public class TypeB
