@@ -1,7 +1,7 @@
 # Keywords/Primitives
 ## `struct`
 
-A structure is a type of [primitive](Primitives.md) keyword, with certain special properties.
+A `struct` (structure) is a type of [primitive](Primitives.md) keyword, with certain special properties.
 - Non-nullable.
 - Can derive from an interface or other structure.
 - Only other structs can derive from a structure.

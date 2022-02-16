@@ -1,6 +1,6 @@
 using namespace System;
 
-namespace Examples
+public namespace Examples
 {
     public static class FizzBuzz
     {
