@@ -1,0 +1,8 @@
+public namespace System
+{
+    public interface IIncremental
+    {
+        public static IIncremental Default;
+        public IIncremental Next;
+    }
+}
