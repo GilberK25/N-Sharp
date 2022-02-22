@@ -17,7 +17,7 @@ Interfaces have the ability to not declare a body for a field, method, or other 
 
 Interfaces deriving from other interfaces do not have to implement bodies, however a class or structure deriving from it will have to implement bodies from as far back as necessary.
 
-An interface can choose to declare a body for its non-type objects, and in that case a class or structure deriving from it is not required to implement its own. However, it still can by using the `override` keyword.
+An interface can choose to declare a body for its non-type objects, and in that case a class or structure deriving from it is not required to implement its own. However, it still can by using the [`override`](../Implementation/override.md) keyword.
 
 ```nsharp
 public namespace Example

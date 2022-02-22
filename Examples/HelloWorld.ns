@@ -7,7 +7,7 @@ public namespace Examples // Namespace not required.
         public static void Main() // Declare the entry method. Arguments not needed, so they aren't declared.
         {
             // Create a console instance to print to.
-            Console console = new();
+            Console console = new;
             console.Write("Hello World!"); // Print!
 
             console.Dispose();
