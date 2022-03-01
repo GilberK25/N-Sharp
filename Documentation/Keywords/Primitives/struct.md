@@ -5,7 +5,8 @@ A `struct` (structure) is a type of [primitive](Primitives.md) keyword, with cer
 - Non-nullable.
 - Can derive from an interface or other structure.
 - Only other structs can derive from a structure.
-- Can be marked abstract
+- Can be marked abstract.
+- Cannot be marked static.
 - Cannot contain an entry method.
 - Can contain a static constructor.
 - Must contain a parameterless constructor (or a default one will be used).

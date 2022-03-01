@@ -1,0 +1,33 @@
+public namespace System
+{
+    public const sealed struct Bit : IBitwise<Bit>, IComparable<Bit>, I4Function<Bit>, IIncremental<Bit>,
+                                     IParseable<Bit>, ISystemKeyword<"bit">
+    {
+        public static const Bit Off = 0;
+        public static const Bit On = 1;
+
+        public const sealed Bit();
+
+        public static const sealed Bit Parse(String str);
+
+        public const sealed Boolean Equals(Bit other);
+        public const sealed Boolean IsGreater(Bit other);
+        public const sealed Boolean IsLesser(Bit other);
+
+        public const sealed Bit And(Bit other);
+        public const sealed Bit Or(Bit other);
+        public const sealed Bit Not();
+        public const sealed Bit Xor(Bit other);
+
+        public static const sealed override operator (Bit sum, Bit carry) +(Bit a, Bit b);
+        public static const sealed operator Bit -(Bit a, Bit b);
+        public static const sealed operator Bit *(Bit a, Bit b);
+        public static const sealed operator Bit /(Bit a, Bit b);
+        public static const sealed operator Boolean ==(Bit a, Bit b);
+        public static const sealed operator Boolean !=(Bit a, Bit b);
+        public static const sealed operator Boolean >(Bit a, Bit b);
+        public static const sealed operator Boolean <(Bit a, Bit b);
+        public static const sealed operator Boolean >=(Bit a, Bit b);
+        public static const sealed operator Boolean <=(Bit a, Bit b);
+    }
+}

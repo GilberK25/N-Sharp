@@ -1,0 +1,15 @@
+public namespace System
+{
+    public const interface IBitwise<T>
+    {
+        public const T And(T other);
+        public const T Or(T other);
+        public const T Not();
+        public const T Xor(T other);
+
+        public static const T operator &&(T a, T b) => a.And(b);
+        public static const T operator ||(T a, T b) => a.Or(b);
+        public static const T operator ^(T a, T b) => a.Xor(b);
+        public static const T operator !(T val) => val.Not();
+    }
+}

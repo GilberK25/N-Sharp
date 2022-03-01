@@ -7,7 +7,7 @@ public namespace Examples
         public static void Main()
         {
             // Get an int from the console's input.
-            Console console = new();
+            Console console = new;
             int max = console.ReadInt("Enter a number to count to > ");
 
             for (int i = 1; i <= max; i++) // Run a loop from 1 to 100

@@ -6,18 +6,17 @@ An interface is a type of [primitive](Primitives.md) that is intended to be used
 - Can only derive from another interface.
 - Other classes, structures, or interfaces can derive from an interface.
 - Cannot be marked abstract.
+- Cannot be marked static.
 - Cannot contain an entry method.
-- Can contain a static constructor.
-- Does not require a constructor.
-- Must assign every field in each constructor.
-- Cannot assign any field in its declaration.
+- Cannot contain a constructor.
+- Can assign fields in their declarations.
 - A non-type object included does not require a body.
 
-Interfaces have the ability to not declare a body for a field, method, or other non-type object. When a class or structure implements the interface, it will have to implement the body for any non-type objects without a body. Interfaces *can* be null, but a deriving structure never will be when cast back to its interface form. However, a null class casted to a null interface will be null. Interfaces also cannot use the [`abstract`](../Implementation/abstract.md) keyword, since by default an interface already has similar behavior.
+Interfaces have the ability to not declare a body for a field, method, or other non-type object (excluding constructors). When a class or structure derives from the interface, it will have to implement the body for any non-type objects without a body. Interfaces *can* be null, but a deriving structure never will be when cast back to its interface form. However, a null class casted to a null interface will be null. Interfaces also cannot use the [`abstract`](../Implementation/abstract.md) keyword, since by default an interface already has similar behavior.
 
 Interfaces deriving from other interfaces do not have to implement bodies, however a class or structure deriving from it will have to implement bodies from as far back as necessary.
 
-An interface can choose to declare a body for its non-type objects, and in that case a class or structure deriving from it is not required to implement its own. However, it still can by using the `override` keyword.
+An interface can choose to declare a body for its non-type objects, and in that case a class or structure deriving from it is not required to implement its own. However, it still can by using the [`override`](../Implementation/override.md) keyword. After being overridden, a non-type object can have things such as its return type changed.
 
 ```nsharp
 public namespace Example
@@ -28,14 +27,6 @@ public namespace Example
         public int FieldB;
         public int FieldC = 5;
         // `FieldC` cannot be assigned to here.
-
-        public TypeA(); // Not declaring a body.
-        public TypeA(int varA, int varB, int varC) // Declaring a body.
-        {
-            FieldA = varA;
-            FieldB = varB;
-            FieldC = var3;
-        }
 
         public void MethodA(); // No-body method.
         public void MethodB() { } // Bodied method.
@@ -59,7 +50,7 @@ public namespace Example
         public int FieldC;
         public int FieldD;
 
-        public TypeD() // Replace the interface constructor type with the deriving one.
+        public TypeD()
         {
             FieldA = -1;
             FieldB = -1;
@@ -73,7 +64,7 @@ public namespace Example
             // This is calling the non-overriden `MethodC()`.
         }
 
-        public override void MethodC() { } // Overriden body from `TypeC.MethodC()`
+        public override void MethodC() { } // Overridden body from `TypeC.MethodC()`
     }
 }
 ```
