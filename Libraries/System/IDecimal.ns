@@ -1,0 +1,7 @@
+public namespace System
+{
+    public sealed interface IDecimal<T, String KEYWORD> : INumber<T, KEYWORD>
+    {
+        
+    }
+}

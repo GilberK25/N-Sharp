@@ -1,0 +1,10 @@
+public namespace System
+{
+    public const interface IEquatable<T>
+    {
+        public const Boolean Equals(T other);
+
+        public static const operator Boolean ==(T a, T b);
+        public static const operator Boolean !=(T a, T b);
+    }
+}

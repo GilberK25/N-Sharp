@@ -1,0 +1,10 @@
+public namespace System
+{
+    public const interface I4Function<T>
+    {
+        public static const operator T +(T a, T b);
+        public static const operator T -(T a, T b);
+        public static const operator T *(T a, T b);
+        public static const operator T /(T a, T b);
+    }
+}

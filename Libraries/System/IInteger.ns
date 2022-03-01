@@ -1,0 +1,7 @@
+public namespace System
+{
+    public const interface IInteger<T, String KEYWORD> : INumber<T, KEYWORD>
+    {
+        
+    }
+}

@@ -1,0 +1,4 @@
+public namespace System
+{
+    internal const sealed interface ISystemKeyword<String KEYWORD>;
+}

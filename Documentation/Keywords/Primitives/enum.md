@@ -32,7 +32,7 @@ public namespace Example
 
 Enums also have an optional generic parameter. Any type you enter will become the type you assign options to. For example, if your object is an `enum<string>`, values such as `"value"` will be entered instead of numbers. If a generic parameter is not given, it defaults to the smallest integer type which encapsulates all the values.
 
-If your type parameter is an [`IIncrementable`](../../../Libraries/System/IIncremental.ns), including a value is optional, as the enum will automatically assign a value incremented by 1 from the previous value. The first value is set to `IIncrementable.Default`. If the type is not an `IIncrementable`, you must supply a constant value to each option.
+If your type parameter is an [`IIncrementable<T>`](../../../Libraries/System/IIncremental.ns), including a value is optional, as the enum will automatically assign a value incremented by 1 from the previous value. The first value is set to `IIncrementable<T>.Default`. If the type is not an `IIncrementable<T>`, you must supply a constant value to each option.
 
 ```nsharp
 public namespace Example
