@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace NSharp.Compiler
 {
@@ -50,7 +51,28 @@ namespace NSharp.Compiler
                 }
 
                 piece += code[i];
+
+                // So far, this code has looped over each character, and checked for comments, quotes,
+                // and semicolons. It does not check for groups with things like { } yet. But, that's
+                // fine, because we'll sort that out in step 2.
+
+                // Just FYI: I have not tested this yet. So it may be completely broken. TODO
             }
+
+            // Step 2: Take each command, parse what it's doing using the pieces, and convert them to
+            // a simpler language. TODO
+            // Note: to make things easier, when we get a method in the code, we'll probably just copy
+            // its code when its called.
+
+            // After that, we're done with the compilation. The rest of the process will be done at
+            // runtime by executing the `ExecuteCode()` function.
+        }
+
+        public async Task ExecuteCode()
+        {
+            // Take each "command" parsed in the initialization, and execute it. We will have to store a
+            // list of variables with their data (probably stored in simplest form), along with their
+            // accessibility levels, other information, and garbage collection. Fun stuff. TODO
         }
     }
 }
