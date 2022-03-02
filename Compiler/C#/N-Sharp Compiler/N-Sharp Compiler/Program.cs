@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace NSharp.Compiler
 {
-    public class InterpreterV1
+    public class Interpreter
     {
         public const string VERSION = "1.0";
 
