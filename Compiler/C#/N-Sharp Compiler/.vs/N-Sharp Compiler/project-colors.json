@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "993a9f7b-a518-4451-94da-b50f57723633": {
+      "ProjectGuid": "993a9f7b-a518-4451-94da-b50f57723633",
+      "DisplayName": "N-Sharp Compiler",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
