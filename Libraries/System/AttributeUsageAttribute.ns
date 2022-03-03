@@ -1,0 +1,16 @@
+public namespace System
+{
+    public sealed class AttributeUsageAttribute : Attribute
+    {
+        public readonly bool AllowMultiple;
+        public readonly bool Inherited;
+        public readonly AttributeTargets ValidOn;
+
+        public AttributeUsageAttribute(bool allowMultiple, bool inherited, AttributeTargets validOn)
+        {
+            AllowMultiple = allowMultiple;
+            Inherited = inherited;
+            ValidOn = validOn;
+        }
+    }
+}

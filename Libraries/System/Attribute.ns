@@ -1,0 +1,7 @@
+public namespace System
+{
+    public partial sealed class Attribute
+    {
+        
+    }
+}

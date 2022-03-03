@@ -1,0 +1,9 @@
+public namespace System
+{
+    [AttributeUsage(false, true, AttributeTargets.Class || AttributeTargets.Struct ||
+                                 AttributeTargets.Interface)]
+    internal sealed class CannotMakeInstanceOfAttribute : Attribute
+    {
+
+    }
+}
