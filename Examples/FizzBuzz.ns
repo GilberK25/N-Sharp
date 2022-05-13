@@ -1,24 +1,23 @@
 using namespace System;
 
-public namespace Examples
+public namespace Examples;
+
+public static class FizzBuzz
 {
-    public static class FizzBuzz
+    public static void Main()
     {
-        public static void Main()
+        // Get an int from the console's input.
+        Console console = new;
+        int max = console.ReadInt("Enter a number to count to > ");
+
+        for (int i = 1; i <= max; i++) // Run a loop from 1 to 100
         {
-            // Get an int from the console's input.
-            Console console = new;
-            int max = console.ReadInt("Enter a number to count to > ");
+            string val = ""; // This is what we will be printing.
+            if (i % 3 == 0) val += "Fizz"; // If i mod 3 is 0 (every third), add "Fizz"
+            if (i % 5 == 0) val += "Buzz"; // If i mod 5 is 0 (every fifth), add "Buzz"
+            if (val.Empty) val = i.ToString(); // If nothing has been added, set to the number.
 
-            for (int i = 1; i <= max; i++) // Run a loop from 1 to 100
-            {
-                string val = ""; // This is what we will be printing.
-                if (i % 3 == 0) val += "Fizz"; // If i mod 3 is 0 (every third), add "Fizz"
-                if (i % 5 == 0) val += "Buzz"; // If i mod 5 is 0 (every fifth), add "Buzz"
-                if (val.Empty) val = i.ToString(); // If nothing has been added, set to the number.
-
-                con.Write(val); // Print the number
-            }
+            con.Write(val); // Print the number
         }
     }
 }
