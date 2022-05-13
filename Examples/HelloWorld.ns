@@ -1,6 +1,6 @@
 using namespace System; // The `Console` object is part of the `System` namespace.
 
-public namespace Examples // Namespace not required.
+public namespace Examples; // Namespace not required.
 
 public static class HelloWorld // This class does not need instances, and can be declared as static.
 {
