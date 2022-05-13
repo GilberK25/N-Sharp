@@ -27,7 +27,7 @@ public extern class Console : ICloneable<Console>, IDisposable, IEquatable<Conso
     private static extern Console? _Default;
     private static extern bool _LargestWindowSize;
 
-    public event ConsoleEvent OnCancelKeyPressed;
+    public event ConsoleEvent<ConsoleKey> OnCancelKeyPressed;
 
     public double CursorSize
     {
