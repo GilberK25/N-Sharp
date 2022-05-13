@@ -1,17 +1,17 @@
 using namespace System; // The `Console` object is part of the `System` namespace.
 
 public namespace Examples // Namespace not required.
-{
-    public static class HelloWorld // This class does not need instances, and can be declared as static.
-    {
-        public static void Main() // Declare the entry method. Arguments not needed, so they aren't declared.
-        {
-            // Create a console instance to print to.
-            Console console = new;
-            console.Write("Hello World!"); // Print!
 
-            console.Dispose();
-            // `Console` can be disposed, but since we are at the end of the program, it isn't required.
-        }
+public static class HelloWorld // This class does not need instances, and can be declared as static.
+{
+    public static void Main() // Declare the entry method. Arguments not needed, so they aren't declared.
+    {
+        // Create a console instance to print to.
+        Console console = new;
+        console.Write("Hello World!"); // Print!
+
+        console.Dispose();
+        // `Console` can be disposed, but since we are at the end of the program, it isn't required.
     }
 }
+
