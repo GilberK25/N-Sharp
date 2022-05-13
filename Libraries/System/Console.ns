@@ -1,0 +1,156 @@
+using namespace System.Events;
+using namespace System.Settings;
+using namespace System.Text;
+
+public namespace System;
+
+[ExternImport("System.nslib", Type.NSharpLibrary)]
+public extern class Console : ICloneable<Console>, IDisposable, IEquatable<Console>, IFormattable
+{
+    static extern Console();
+
+    public static bool CapsLock
+    {
+        get => _CapsLock
+    };
+    public static Console? Default
+    {
+        get => _Default,
+        private extern set
+    };    
+    public static ushort2 LargestWindowSize
+    {
+        get => _LargestWindowSize
+    };
+
+    private static extern bool _CapsLock;
+    private static extern Console? _Default;
+    private static extern bool _LargestWindowSize;
+
+    public event ConsoleEvent OnCancelKeyPressed;
+
+    public double CursorSize
+    {
+        get => _CursorSize,
+        extern set
+    };
+    public ushort2 BufferSize
+    {
+        get => _BufferSize,
+        extern set
+    };
+    public ushort2 WindowSize
+    {
+        get => _WindowSize,
+        extern set
+    };
+
+    public ushort2 CursorPosition
+    {
+        get => _CursorPosition,
+        extern set
+    };
+    public ushort2 WindowPosition
+    {
+        get => _WindowPosition,
+        extern set
+    };
+
+    public Encoding Encoding
+    {
+        get => _Encoding,
+        private extern set
+    };
+
+    public TextWriter Error
+    {
+        get => _Error,
+        private extern set
+    };
+    public TextReader In
+    {
+        get => _In,
+        private extern set
+    };
+    public TextWriter Out
+    {
+        get => _Out,
+        private extern set
+    };
+
+    public bool IsKeyAvailable
+    {
+        get => _IsKeyAvaliable
+    };
+
+    public bool IsErrorRedirected
+    {
+        get => _IsErrorRedirected
+    };
+    public bool IsInputRedirected
+    {
+        get => _IsInputRedirected
+    };
+    public bool IsOutputRedirected
+    {
+        get => _IsOutputRedirected
+    };
+
+    public unsafe byte[]* DataBuffer
+    {
+        get => _DataBuffer,
+        private extern set
+    };
+
+    private extern double _CursorSize;
+    private extern ushort2 _BufferSize;
+    private extern ushort2 _WindowSize;
+    private extern ushort2 _CursorPosition;
+    private extern ushort2 _WindowPosition;
+    private extern Encoding _Encoding;
+    private extern TextWriter _Error;
+    private extern TextReader _In;
+    private extern TextWriter _Out;
+    private extern bool _IsKeyAvaliable;
+    private extern bool _IsErrorRedirected;
+    private extern bool _IsInputRedirected;
+    private extern bool _IsOutputRedirected;
+    private extern unsafe byte[]* _DataBuffer;
+
+    public extern Console();
+    public extern Console(string name);
+    public extern Console(ConsoleSettings settings);
+
+    extern ~Console();
+
+    public extern Console Clone();
+
+    public extern void Beep();
+    public extern void Beep(int frequency, int duration);
+
+    public extern void Clear();
+    public extern void Close();
+    public extern void Dispose();
+    public extern void ResetColor();
+
+    public extern bool HasSettings(ConsoleSettings settings);
+
+    public extern T Read<T>() where T is IParseable<T>;
+    public extern string ReadLine();
+    public extern ConsoleKey ReadKey();
+
+    public extern void Write(string message, bool newLine = true);
+    public extern void Write(string message, bool newLine = true);
+    public extern void Write(string message, ConsoleTextSettings textSettings, bool newLine = true);
+    public extern void Write<T>(T obj, bool newLine = true);
+    public extern void Write<T>(T obj, IFormatter<T> formatter, bool newLine = true);
+
+    public extern override bool Equals(object? other);
+    public extern bool Equals(Console other);
+    public extern override int GetHashCode();
+    public extern override string ToString();
+    public extern string ToString(IFormatter formatter);
+
+    public static extern bool operator ==(Console a, Console b);
+    public static extern bool operator !=(Console a, Console b);
+}
