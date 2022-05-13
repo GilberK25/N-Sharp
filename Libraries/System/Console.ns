@@ -4,7 +4,7 @@ using namespace System.Text;
 
 public namespace System;
 
-[ExternImport("System.nslib", Type.NSharpLibrary)]
+[ExternImport("System.nslib", LibraryType.NSharpLibrary)]
 public extern class Console : ICloneable<Console>, IDisposable, IEquatable<Console>, IFormattable
 {
     static extern Console();
