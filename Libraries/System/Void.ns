@@ -1,0 +1,4 @@
+public namespace System;
+
+[Unusable]
+public struct Void { }
