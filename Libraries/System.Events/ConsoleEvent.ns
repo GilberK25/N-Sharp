@@ -1,0 +1,5 @@
+public namespace System.Events;
+
+public delegate void ConsoleEvent();
+public delegate void ConsoleEvent<T>(T arg);
+public delegate void ConsoleEvent<T1, T2>(T1 arg1, T2 arg2);
