@@ -1,8 +1,0 @@
-public namespace System
-{
-    [AttributeUsage(false, false, AttributeTargets.Enum)]
-    public sealed class FlagsAttribute : Attribute
-    {
-        
-    }
-}

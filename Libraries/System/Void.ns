@@ -1,5 +1,0 @@
-public namespace System
-{
-    [CannotMakeInstanceOf]
-    internal sealed struct Void : ISystemKeyword<"void">;
-}

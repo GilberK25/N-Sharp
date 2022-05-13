@@ -1,7 +1,0 @@
-public namespace System
-{
-    public const interface IParseable<T>
-    {
-        public static const T Parse(String str);
-    }
-}
