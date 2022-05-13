@@ -1,0 +1,8 @@
+public namespace System;
+
+public enum LibraryType : string
+{
+    DynamicLinkLibrary = "dll",
+    StaticDataLibrary = "lib",
+    NSharpLibrary = "nslib"
+}
