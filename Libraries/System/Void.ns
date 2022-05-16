@@ -1,4 +1,5 @@
 public namespace System;
 
+[SystemKeyword("void")]
 [Unusable]
 public struct Void { }
