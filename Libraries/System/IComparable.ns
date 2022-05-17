@@ -1,0 +1,11 @@
+public namespace System;
+
+public interface IComparable<T>
+{
+    public int CompareTo(T other);
+}
+
+public interface IComparable<RT, T>
+{
+    public RT CompareTo(T other);
+}
