@@ -1,8 +1,0 @@
-public namespace System
-{
-    public const interface IIncremental<T>
-    {
-        public static const T Default;
-        public T Next;
-    }
-}

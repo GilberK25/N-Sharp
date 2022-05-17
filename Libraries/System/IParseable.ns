@@ -1,0 +1,6 @@
+public namespace System;
+
+public interface IParseable<T>
+{
+    public static T Parse(string str);
+}

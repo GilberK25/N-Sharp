@@ -1,0 +1,11 @@
+public namespace System;
+
+public interface IFormatter
+{
+    public string Format(object obj);
+}
+
+public interface IFormatter<T> : IFormatter
+{
+    new public string Format(T obj);
+}

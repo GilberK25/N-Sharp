@@ -1,8 +1,0 @@
-public namespace System
-{
-    public const interface INumber<T, String KEYWORD> : IComparable<T>, IParseable<T>, IIncremental<T>,
-                                                        ISystemKeyword<KEYWORD>
-    {
-
-    }
-}

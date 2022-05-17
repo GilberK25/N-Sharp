@@ -1,0 +1,11 @@
+public namespace System;
+
+public interface ICloneable
+{
+    public object Clone();
+}
+
+public interface ICloneable<T> : ICloneable
+{
+    new public T Clone();
+}

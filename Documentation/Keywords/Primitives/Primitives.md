@@ -1,11 +1,12 @@
 # Keywords/Primitives
 ## Primitives
 
-A primitive defines an object to have a certain base characteristics. There are 4 primitives, and they are each a keyword.
+A primitive defines an object to have a certain base characteristics. There are 5 primitives, and they are each a keyword.
 - [`class`](class.md)
 - [`struct`](struct.md)
 - [`interface`](interface.md)
 - [`enum`](enum.md)
+- [`delegate`](delegate.md)
 
 The primitive keyword goes before the type name, but after any instance and protection keywords.
 

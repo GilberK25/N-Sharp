@@ -1,0 +1,18 @@
+public namespace System;
+
+public enum AttributeTargets : ushort
+{
+    Any = 32767,
+    Class = 1,
+    Constructor = 512,
+    Delegate = 16,
+    Enum = 8,
+    Event = 128,
+    Field = 64,
+    Interface = 4,
+    Method = 256,
+    Parameter = 1024
+    Primitive = Class | Struct | Interface | Enum | Delegate,
+    Struct = 2,
+    Variable = 32,
+}
