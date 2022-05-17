@@ -2,6 +2,11 @@ public namespace System;
 
 public interface IFormattable
 {
-    public string ToString(Formatter formatter);
     public string ToString(string? formatter);
+    public string ToString(IFormatter? formatter);
+}
+
+public interface IFormattable<T> : IFormattable
+{
+    public string ToString(IFormatter<T> formatter);
 }
