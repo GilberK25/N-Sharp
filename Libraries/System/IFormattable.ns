@@ -2,6 +2,6 @@ public namespace System;
 
 public interface IFormattable
 {
-    public string ToString(IFormatter formatter);
+    public string ToString(Formatter formatter);
     public string ToString(string? formatter);
 }
