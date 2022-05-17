@@ -150,6 +150,7 @@ public extern class Console : ICloneable<Console>, IDisposable, IEquatable<Conso
     public extern override int GetHashCode();
     public extern override string ToString();
     public extern string ToString(IFormatter formatter);
+    public extern string ToString(IFormatter<Console> formatter);
 
     public static extern bool operator ==(Console a, Console b);
     public static extern bool operator !=(Console a, Console b);
