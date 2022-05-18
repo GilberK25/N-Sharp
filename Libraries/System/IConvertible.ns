@@ -1,0 +1,6 @@
+public namespace System;
+
+public interface IConvertible
+{
+    public T ToType<T>();
+}
