@@ -5,9 +5,9 @@ public interface IComparable
     public int CompareTo(object other);
 }
 
-public interface IComparable<T>
+public interface IComparable<T> : IComparable
 {
-    public int CompareTo(T other);
+    new public int CompareTo(T other);
 }
 
 public interface IComparable<RT, T> : IComparable<T>
