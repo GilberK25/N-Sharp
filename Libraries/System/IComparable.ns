@@ -9,8 +9,3 @@ public interface IComparable<T> : IComparable
 {
     public int CompareTo(T other);
 }
-
-public interface IComparable<RT, T> : IComparable<T>
-{
-    new public RT CompareTo(T other);
-}
