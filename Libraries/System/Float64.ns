@@ -1,0 +1,175 @@
+public namespace System;
+
+[ExternImport("System.nslib", LibraryType.NSharpLibrary)]
+[SystemKeyword("double")]
+public extern const struct Float64 : ICloneable<Float64>, IComparable<Float64>, IConvertible, IEquatable<Float64>, IFormattable, IParseable<Float64>
+{
+    public static const Float64 Epsilon = 4.94065645841247E-324;
+    public static const Float64 MaxValue = 1.7976931348623157E+308;
+    public static const Float64 MinValue = -1.7976931348623157E+308;
+    public static const Float64 NaN = 0.0 / 0.0;
+    public static const Float64 NegativeInfinity  = -1.0 / 0.0;
+    public static const Float64 One = 1.0;
+    public static const Float64 PositiveInfinity = 1.0 / 0.0;
+    public static const Float64 Zero = 0.0;
+
+    public extern const Float64();
+    public extern const Float64(Int8 from);
+    public extern const Float64(UInt8 from);
+    public extern const Float64(Int16 from);
+    public extern const Float64(UInt16 from);
+    public extern const Float64(Int24 from);
+    public extern const Float64(UInt24 from);
+    public extern const Float64(Int32 from);
+    public extern const Float64(UInt32 from);
+    public extern const Float64(Int48 from);
+    public extern const Float64(UInt48 from);
+    public extern const Float64(Int64 from);
+    public extern const Float64(UInt64 from);
+    public extern const Float64(Int128 from);
+    public extern const Float64(UInt128 from);
+    public extern const Float64(Float8 from);
+    public extern const Float64(UFloat8 from);
+    public extern const Float64(Float16 from);
+    public extern const Float64(UFloat16 from);
+    public extern const Float64(Float24 from);
+    public extern const Float64(UFloat24 from);
+    public extern const Float64(Float32 from);
+    public extern const Float64(UFloat32 from);
+    public extern const Float64(UFloat64 from);
+    public extern const Float64(Float48 from);
+    public extern const Float64(UFloat48 from);
+    public extern const Float64(Float128 from);
+    public extern const Float64(UFloat128 from);
+
+    public static extern const bool IsFinite(Float64 num);
+    public static extern const bool IsInfinity(Float64 num);
+    public static extern const bool IsNaN(Float64 num);
+    public static extern const bool IsNegative(Float64 num);
+    public static extern const bool IsNegativeInfinity(Float64 num);
+    public static extern const bool IsPositive(Float64 num);
+    public static extern const bool IsPositiveInfinity(Float64 num);
+
+    public static extern const Float64 Parse(string str);
+    public static extern const bool TryParse(string str, out Float64 num)
+    {
+        try
+        {
+            num = Parse(str);
+            return true;
+        }
+        return false;
+    }
+
+    public extern const int CompareTo(Float64 other);
+    public extern const int CompareTo(object other);
+
+    public extern const bool Equals(Float64 other);
+
+    public extern const byte[] GetBytes();
+
+    public extern const int GetHashCode();
+
+    public extern const string ToString();
+    public extern string ToString(string? formatter);
+    public extern string ToString(IFormatter formatter);
+
+    public extern const T ToType<T>() => (T)(T switch
+    {
+        typeof(bool) => ToBoolean(),
+        typeof(Int8) => ToInt8(),
+        typeof(UInt8) => ToUInt8(),
+        typeof(Int16) => ToInt16(),
+        typeof(UInt16) => ToUInt16(),        
+        typeof(Int24) => ToInt24(),
+        typeof(UInt24) => ToUInt24(),
+        typeof(Int32) => ToInt32(),
+        typeof(UInt32) => ToUInt32(),
+        typeof(Int64) => ToInt64(),
+        typeof(UInt64) => ToUInt64(),
+        typeof(Int128) => ToInt128(),
+        typeof(UInt128) => ToUInt128(),
+        typeof(Float8) => ToFloat8(),
+        typeof(UFloat8) => ToUFloat8(),
+        typeof(Float16) => ToFloat16(),
+        typeof(UFloat16) => ToUFloat16(),
+        typeof(Float24) => ToFloat24(),
+        typeof(UFloat24) => ToUFloat24(),
+        typeof(Float32) => ToFloat32(),
+        typeof(UFloat32) => ToUFloat32(),
+        typeof(Float64) => ToFloat64(),
+        typeof(UFloat64) => ToUFloat64(),
+        typeof(Float128) => ToFloat128(),
+        typeof(UFloat128) => ToUFloat128(),
+        _ => throw new UnsupportedGenericValue(typeof(T)),
+    });
+
+    private extern const bool ToBoolean();
+    private extern const Int8 ToInt8();
+    private extern const UInt8 ToUInt8();
+    private extern const Int16 ToInt16();
+    private extern const UInt16 ToUInt16();
+    private extern const Int24 ToInt24();
+    private extern const UInt24 ToUInt24();
+    private extern const Int32 ToInt32();
+    private extern const UInt32 ToUInt32();
+    private extern const Int48 ToInt48();
+    private extern const UInt48 ToUInt48();
+    private extern const Int64 ToInt64();
+    private extern const UInt64 ToUInt64();
+    private extern const Int128 ToInt128();
+    private extern const UInt128 ToUInt128();
+    private extern const Float8 ToFloat8();
+    private extern const UFloat8 ToUFloat8();
+    private extern const Float16 ToFloat16();
+    private extern const Float16 ToUFloat16();
+    private extern const Float24 ToFloat24();
+    private extern const Float24 ToUFloat24();
+    private extern const Float32 ToFloat32();
+    private extern const Float32 ToUFloat32();
+    private extern const Float48 ToFloat48();
+    private extern const Float48 ToUFloat48();
+    private extern const Float64 ToFloat64() => this;
+    private extern const Float64 ToUFloat64();
+    private extern const Float128 ToFloat128();
+    private extern const Float128 ToUFloat128();
+
+    public static extern const Float64 operator +(Float64 a, Float64 b);
+    public static extern const Float64 operator -(Float64 a, Float64 b);
+    public static extern const Float64 operator *(Float64 a, Float64 b);
+    public static extern const Float64 operator /(Float64 a, Float64 b);
+    public static extern const bool operator ==(Float64 a, Float64 b);
+    public static extern const bool operator !=(Float64 a, Float64 b);
+    public static extern const bool operator >(Float64 a, Float64 b);
+    public static extern const bool operator >=(Float64 a, Float64 b);
+    public static extern const bool operator <(Float64 a, Float64 b);
+    public static extern const bool operator <=(Float64 a, Float64 b);
+
+    public static implicit operator Float64(Int8 obj) => new(obj);
+    public static implicit operator Float64(UInt8 obj) => new(obj);
+    public static implicit operator Float64(Int16 obj) => new(obj);
+    public static implicit operator Float64(UInt16 obj) => new(obj);
+    public static implicit operator Float64(Int24 obj) => new(obj);
+    public static implicit operator Float64(UInt24 obj) => new(obj);
+    public static implicit operator Float64(Int32 obj) => new(obj);
+    public static implicit operator Float64(UInt32 obj) => new(obj);
+    public static implicit operator Float64(Int48 obj) => new(obj);
+    public static implicit operator Float64(UInt48 obj) => new(obj);
+    public static implicit operator Float64(Int64 obj) => new(obj);
+    public static implicit operator Float64(UInt64 obj) => new(obj);
+    public static implicit operator Float64(Int128 obj) => new(obj);
+    public static implicit operator Float64(UInt128 obj) => new(obj);
+    public static implicit operator Float64(Float8 obj) => new(obj);
+    public static implicit operator Float64(UFloat8 obj) => new(obj);
+    public static implicit operator Float64(Float16 obj) => new(obj);
+    public static implicit operator Float64(UFloat16 obj) => new(obj);
+    public static implicit operator Float64(Float24 obj) => new(obj);
+    public static implicit operator Float64(UFloat24 obj) => new(obj);
+    public static implicit operator Float64(Float32 obj) => new(obj);
+    public static implicit operator Float64(UFloat32 obj) => new(obj);
+    public static implicit operator Float64(Float48 obj) => new(obj);
+    public static implicit operator Float64(UFloat48 obj) => new(obj);
+    public static explicit operator Float64(UFloat64 obj) => new(obj);
+    public static explicit operator Float64(Float128 obj) => new(obj);
+    public static explicit operator Float64(UFloat128 obj) => new(obj);
+}
