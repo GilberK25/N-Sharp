@@ -1,5 +1,10 @@
 public namespace System;
 
+public interface IComparable
+{
+    public int CompareTo(object other);
+}
+
 public interface IComparable<T>
 {
     public int CompareTo(T other);
