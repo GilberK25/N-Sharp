@@ -17,3 +17,5 @@ public extern interface IEnumerator : IEquatable<T>
     }
     public extern bool Equals(IEnumerator other);
 }
+
+// Ill work on the generic version later
