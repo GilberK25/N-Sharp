@@ -3,21 +3,14 @@ using namespace System;
 public namespace System.Collections;
 
 [ExternImport("System.Collections.nslib", LibraryType.NSharpLibrary)]
-public extern interface IEnumerator : IEquatable<T>
+public extern interface IEnumerator
 {
     public extern object Current;
     private extern void Increment();
     public extern void Increment(int amount) => for (int i = 0; i < amount; i++) Increment();
-
-    public override bool Equals(object? other)
-    {
-        if (other == null) return false;
-        if (typeof(other) == typeof(IEnumerator)) return Equals((IEnumerator)other);
-        return false;
-    }
-    public extern bool Equals(IEnumerator other);
 }
 
+[ExternImport("System.Collections.nslib", LibraryType.NSharpLibrary)]
 public extern interface IEnumerator<T> : IEnumerator
 {
     new public extern T Current;
