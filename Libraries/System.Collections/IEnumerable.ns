@@ -1,0 +1,11 @@
+public namespace System.Collections;
+
+public interface IEnumerable
+{
+    public IEnumerator GetEnumerator();
+}
+
+public interface IEnumerable<T> : IEnumerable
+{
+    public IEnumerator<T> GetEnumerator();
+}
