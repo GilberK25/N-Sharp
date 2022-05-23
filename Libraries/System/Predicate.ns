@@ -1,0 +1,4 @@
+public namespace System;
+
+public delegate bool Predicate(object compare);
+public delegate bool Predicate<T>(T compare);
