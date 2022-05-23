@@ -1,0 +1,13 @@
+using namespace System;
+
+public namespace System.Collections;
+
+public interface IArray : ICloneable<IArray>, IEnumerable, IEquatable<IArray>, IFormattable, IFormattable<IArray>
+{
+    public object this[int index];
+}
+
+public interface IArray<T> : ICloneable<IArray<T>>, IEnumerable<T>, IEquatable<IArray<T>, IFormattable, IFormattable<IArray<T>>
+{
+    public T this[int index];
+}
