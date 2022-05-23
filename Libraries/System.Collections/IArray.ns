@@ -4,10 +4,14 @@ public namespace System.Collections;
 
 public interface IArray : ICloneable<IArray>, IEnumerable, IEquatable<IArray>, IFormattable, IFormattable<IArray>
 {
+    public int Length { get, private set };
+
     public object this[int index];
 }
 
 public interface IArray<T> : ICloneable<IArray<T>>, IEnumerable<T>, IEquatable<IArray<T>, IFormattable, IFormattable<IArray<T>>
 {
+    public int Length { get, private set };
+
     public T this[int index];
 }
